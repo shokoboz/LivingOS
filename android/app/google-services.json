@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "628672741979",
+    "project_id": "livingos-f4b66",
+    "storage_bucket": "livingos-f4b66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628672741979:android:af5c133351a73cb4a5357e",
+        "android_client_info": {
+          "package_name": "com.livingos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628672741979-k7fd9jc29k2ukgdlr296eq7bfsgqri2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRBpRSHOKOGG1dopZe1vvzP2iiuJCmqhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628672741979-k7fd9jc29k2ukgdlr296eq7bfsgqri2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
