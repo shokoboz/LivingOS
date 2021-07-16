@@ -15,27 +15,18 @@ import {AuthContext} from '../navigation/AuthProvider';
 import {screenHeight, screenWidth} from '../utils/Dimensions';
 const HomeScreen = () => {
   const onTouchBanner = index => {
-    if (index === 0) {
-      Linking.canOpenURL('https://www.thelivingos.com/').then(supported => {
-        if (supported) {
-          Linking.openURL('https://www.thelivingos.com/');
-        }
-      });
-    } else if (index === 1) {
-      Linking.openURL('google.navigation:q=100+101');
-    } else if (index === 2) {
-    }
+    Alert.alert('DD');
   };
   const renderItem = ({item, index}) => {
     return (
-      <TouchableOpacity onPress={onTouchBanner(index)}>
-        <View>
+      <View style={styles.slide}>
+        <TouchableOpacity onPress={onTouchBanner(index)}>
           <Image style={styles.imageSldie} source={item.image} />
           <View style={styles.imageCaption}>
             <Text>{item.title}</Text>
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     );
   };
   const entries = [
@@ -59,6 +50,7 @@ const HomeScreen = () => {
         data={entries}
         renderItem={renderItem}
         sliderWidth={screenWidth}
+        loop={true}
         itemWidth={screenWidth}
       />
       <FormButton buttonText="List View" />
