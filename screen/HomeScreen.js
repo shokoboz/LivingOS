@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Linking,
   TouchableHighlight,
+  Alert,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import FormButton from '../components/FormButton';
@@ -27,16 +28,14 @@ const HomeScreen = () => {
   };
   const renderItem = ({item, index}) => {
     return (
-      <View style={styles.slide}>
-        <TouchableOpacity onPress={onTouchBanner(index)}>
-          <View>
-            <Image style={styles.imageSldie} source={item.image} />
-            <View style={styles.imageCaption}>
-              <Text>{item.title}</Text>
-            </View>
+      <TouchableOpacity onPress={onTouchBanner(index)}>
+        <View>
+          <Image style={styles.imageSldie} source={item.image} />
+          <View style={styles.imageCaption}>
+            <Text>{item.title}</Text>
           </View>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableOpacity>
     );
   };
   const entries = [
@@ -62,7 +61,7 @@ const HomeScreen = () => {
         sliderWidth={screenWidth}
         itemWidth={screenWidth}
       />
-      <FormButton buttonText="List Example" />
+      <FormButton buttonText="List View" />
       <FormButton buttonText="Logout" onPress={() => logout()} />
     </View>
   );
